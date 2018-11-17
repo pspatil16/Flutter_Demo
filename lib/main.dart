@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         // counter didn't reset back to zero; the application is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: new MyHomePage(title: 'Flutter Demo '),
+      home: new MyHomePage(title: 'Welcome to Flutter'),
     );
   }
 }
@@ -90,17 +90,18 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             new Text(
               'You have pressed the button this many times:',style: TextStyle(
-              fontSize: 16.0,fontWeight: FontWeight.bold
+              fontSize: 16.0,fontWeight: FontWeight.bold,
             ),),
             new Text(
               '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-            new FlutterLogo(size: 250.0)
+              style: TextStyle(color: Colors.purple,fontSize: 45.0
+            ),),
+            new FlutterLogo(size: 250.0,colors: Colors.red)
           ],
         ),
       ),
       floatingActionButton: new FloatingActionButton(
+
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: new Icon(Icons.add),
